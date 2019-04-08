@@ -7,8 +7,15 @@ public class MaxMin {
 		int arr[]= {1,9,6,3,7};
 		
 		
-		int max=maxnum(arr);
-		System.out.println(max);
+		
+		int maxvalue=arr[0];
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]>maxvalue) {
+				maxvalue=arr[i];
+			}
+		}
+		
+		System.out.println(maxvalue);
 		int min=minnum(arr);
 		System.out.println(min);
 
@@ -26,18 +33,9 @@ public class MaxMin {
 		return minvalue;
 	}
 
-	public static int maxnum(int[] arr) {
-		int maxvalue=arr[0];
-		for(int i=0;i<arr.length;i++) {
-			if(arr[i]>maxvalue) {
-				maxvalue=arr[i];
-			}
-		}
-		return maxvalue;
+
 		
-		
-		
-	}
+	
 
 	
 }
