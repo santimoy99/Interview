@@ -13,8 +13,7 @@ public class stack {
 		top--;
 		data=Stack[top];
 		Stack[top]=0;
-		return data;
-		
+		return data;		
 	}
 	public int peek() {
 		

@@ -6,7 +6,7 @@ public class findoddNum {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("starting ");
 		int n=sc.nextInt();
-		System.out.println("starting ");
+		System.out.println("Ending ");
 		int x=sc.nextInt();
 		
 		

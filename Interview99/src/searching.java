@@ -8,7 +8,7 @@ public class searching {
 		System.out.println("Write a number");
 
 		int n = sc.nextInt();
-		
+
 		int[] array = new int[n];
 		for (int i = 0; i < n; i++) {
 			array[i] = sc.nextInt();
@@ -17,27 +17,25 @@ public class searching {
 
 		System.out.println("Searching number");
 		int s1 = sc.nextInt();
-		
+
 		search(array, s1);
-		
+
 	}
 
 	private static void search(int[] array, int s1) {
 		boolean found = false;
 		for (int i = 0; i < array.length; i++) {
-			if (array[i]==s1) {
+			if (array[i] == s1) {
 				found = true;
 				break;
 			}
-
 		}
-		if(found) {
+		if (found) {
 			System.out.println("yes");
-		}
-		else {
+		} else {
 			System.out.println("No");
 		}
-		
+
 	}
 
 }
