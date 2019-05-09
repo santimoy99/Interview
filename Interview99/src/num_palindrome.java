@@ -18,6 +18,7 @@ public class num_palindrome {
 	    	    
 	    	   
 	       }
+	       System.out.println(rev);
 	       if(temp==rev) {
 	    	   System.out.println("palindrome");
 	       }else {
