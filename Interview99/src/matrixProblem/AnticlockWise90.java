@@ -5,30 +5,77 @@ import java.util.Scanner;
 public class AnticlockWise90 {
 
 	public static void main(String[] args) {
-		  int[][] mat = { { 1, 2 }, { 3, 4 } };
-		    rotate(mat);
-	}
-	public static void rotate(int[][] matrix) {
-	    if (matrix == null) {
-	        return;
-	    }
-	    int n = matrix.length - 1;
-	    int temp = 0;
-	    int[][] mat2 = new int[n + 1][n + 1];
-	    mat2 = matrix;
-	    for (int row = 0; row <= n; row++) {
-	        for (int col = 0; col <= n; col++) {
-	            // mat2[n-col][row] = matrix[row][col];
-	            temp = matrix[col][n - row];
-	            matrix[col][n - row] = matrix[row][col];
-	            matrix[row][col] = temp;
-	        }
-	    }
-	    for (int i = 0; i <= n; i++) {
-	        for (int j = 0; j <= n; j++) {
-	            matrix[i][j] = mat2[i][j];
-	        }
-	    }
 
-}
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the num of row");
+		int r=sc.nextInt();
+		
+		System.out.println("Enter the num of coloum");
+		int c=sc.nextInt();
+		
+		//user input
+		int[][] matrix=new int [r][r];
+		for(int i=0;i<r;i++) {
+			for(int j=0;j<r;j++) {
+				 matrix[i][j]=sc.nextInt();
+			}
+		}
+		
+		//Display the matrix
+		for(int i=0;i<r;i++) {
+			for(int j=0;j<r;j++) {
+				System.out.print(matrix[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		AntiClock(matrix);
+		
+		//Display Anticlock Wise
+		System.out.println("Display Anticlock Wise");
+		for(int i=0;i<matrix.length;i++) {
+			for(int j=0;j<matrix.length;j++) {
+				System.out.print(matrix[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+
+	private static void AntiClock(int[][] matrix) {
+		transpose(matrix);
+		
+		//display Transpose matrix
+		System.out.println("display Transpose matrix");
+		for(int i=0;i<matrix.length;i++) {
+			for(int j=0;j<matrix.length;j++) {
+				System.out.print(matrix[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		//anticlock
+		for(int i=0;i<matrix.length/2;i++) {
+			for(int j=0;j<matrix.length;j++) {
+				int x=matrix[i][j];
+				matrix[i][j]=matrix[matrix.length-i-1][j];
+				matrix[matrix.length-i-1][j]=x;
+			}
+		}
+		
+	}
+
+	private static void transpose(int[][] matrix) {
+
+		int temp=0;
+		for(int i=0;i<matrix.length;i++) {
+			for(int j=i;j<matrix.length;j++) {
+				temp=matrix[i][j];
+				matrix[i][j]=matrix[j][i];
+				matrix[j][i]=temp;
+			}
+		}
+		
+	}
+
 }
