@@ -13,18 +13,17 @@ public class Anagram {
 		System.out.println("write a another string ");
 		String s1=sc.nextLine();
 		
-		s1=removeSpace(s1);
-		s=removeSpace(s);
+		s1=s1.replace(" ", "");
+		s=s.replace(" ", "");
 		//System.out.println(s1);
 		//System.out.println(s);
 		if(s1.length()==s.length()) {
 			s1=convertUpperCase(s1);
 			s=convertUpperCase(s);
-			//System.out.println(s1);
-			//System.out.println(s);
 			
 			s1=sort(s1);
 			s=sort(s);
+			
 			if(s1.equals(s)) {
 				System.out.println("Anagram");
 			}
