@@ -6,7 +6,8 @@ public class DuplicateCharacterRemove {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Write a string ");
 		String s1 = sc.nextLine();
-
+		
+		//String str="java";
 		String temp = "";
 
 		s1 = s1.replace(" ", "");
@@ -19,7 +20,7 @@ public class DuplicateCharacterRemove {
 				
 			}
 		}
-		System.out.println(temp);
+		System.out.println(temp);//jav
 
 	}
 
